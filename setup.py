@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
     name = 'willowDb',
     packages = ['willowDb'],
-    version = '0.1.2',
+    version = '0.1.3',
     license='MIT',
     description = 'A document database as a python module',
     author = 'Cameron Perrier',
@@ -11,6 +11,7 @@ setup(
     download_url = 'https://github.com/monkeytravel/willowDb/archive/refs/tags/v0.1.tar.gz',
     keywords = ['db', 'documentDb', 'nosql'],
     install_requires=[],
+    include_package_data=True,
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
