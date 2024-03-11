@@ -1,1 +1,4 @@
-recursive-include dir-pattern coreFunctions dbFuntions utils tables
+graft willowDb/coreFunctions
+graft willowDb/dbFunctions
+graft willowDb/utils
+graft willowDb/tables
