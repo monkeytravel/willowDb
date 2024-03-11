@@ -45,10 +45,11 @@ class InsertClass():
             if os.path.isfile(indexConfifFilePath):
                 indexConfig = files.Files(filePath=indexConfifFilePath, mode="r", errorHandler=self.errorHandler).read(close=True)
                 defaultPrimaryKey = indexConfig["default"]["primaryKey"]
-                if defaultPrimaryKey in data and createPrimaryKey == True:
-                    data[defaultPrimaryKey] = str(uuid.uuid4())
-                else:
-                    return self.errorHandler.primaryKeyNotFoundinRecord("insert")
+                if defaultPrimaryKey not in data:
+                    if createPrimaryKey:
+                        data[defaultPrimaryKey] = str(uuid.uuid4())
+                    else:
+                        return self.errorHandler.primaryKeyNotFoundinRecord("insert")
                 filePath = f"{recordsFolder}{data[defaultPrimaryKey]}.willow"
                 if not os.path.isfile(filePath):
                     files.Files(filePath=filePath, mode="w+", errorHandler=self.errorHandler).write(data=data, close=True, truncate=True)
