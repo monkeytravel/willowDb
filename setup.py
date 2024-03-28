@@ -8,7 +8,7 @@ setup(
     author = 'Cameron Perrier',
     author_email = 'dev@thegalacticgroup.com',
     url = 'https://github.com/monkeytravel/willowDb',
-    download_url = 'https://github.com/monkeytravel/willowDb/archive/refs/tags/v0.1.tar.gz',
+    download_url = 'https://github.com/monkeytravel/willowDb/archive/refs/tags/v0.1.4tar.gz',
     keywords = ['db', 'documentDb', 'nosql'],
     install_requires=[],
     include_package_data=True,
