@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
     name = 'willowDb',
     packages = ['willowDb'],
-    version = '0.1.3',
+    version = '0.1.4',
     license='MIT',
     description = 'A document database as a python module',
     author = 'Cameron Perrier',

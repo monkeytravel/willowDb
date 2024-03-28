@@ -40,6 +40,17 @@ class WillowDb():
         indexConfig.write({"default": {"primaryKey": primaryKey}})
         return {"willDbStatus": "success"}
     
+    def listTables(self, name: str, primaryKey: str):
+        if os.path.exists(self.baseFolder):
+            allItems = os.listdir(self.baseFolder)
+            justDirs = []
+            for item in allItems:
+                if os.path.isdir(self.baseFolder + item):
+                    justDirs.append(item)
+            return justDirs
+        else:
+            return []
+            
     def deleteTable(self, name: str):
         tableFolder = self.baseFolder + name
         if os.path.exists(tableFolder):
