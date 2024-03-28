@@ -1,10 +1,17 @@
 from distutils.core import setup
+
+from pathlib import Path
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
+
 setup(
     name = 'willowDb',
     packages = ['willowDb'],
     version = '0.1.4',
     license='MIT',
     description = 'A document database as a python module',
+    # long_description=long_description,
+    # long_description_content_type='text/markdown',
     author = 'Cameron Perrier',
     author_email = 'dev@thegalacticgroup.com',
     url = 'https://github.com/monkeytravel/willowDb',
